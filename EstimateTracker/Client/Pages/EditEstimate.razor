@@ -1,0 +1,120 @@
+﻿@page "/editestimate"
+@page "/editestimate/{Id}"
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+@using EstimateTracker.Data.Models
+
+<PageTitle>@title</PageTitle>
+
+<h3>@title</h3>
+
+@if (estimate.Id is null)
+ {
+    <p><em>Loading...</em></p>
+ }
+else
+{
+    <div class="row">
+        <div class="col-sm-4">
+            <EditForm Model="@estimate" OnSubmit="HandleSubmit">
+
+
+                <div class="mb-3">
+                    <label for="firstname" class="form-label">First Name:</label>
+                    <InputText id="firstname" @bind-Value="estimate.FirstName" class="form-control"></InputText>
+                </div>
+                <div class="mb-3">
+                    <label for="lastname" class="form-label">Last Name:</label>
+                    <InputText id="lastname" @bind-Value="estimate.LastName" class="form-control"></InputText>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number:</label>
+                    <InputText id="phone" @bind-Value="estimate.PhoneNumber" class="form-control"></InputText>
+                </div>
+                <div class="mb-3">
+                    <label for="jobtype" class="form-label">Job Type:</label>
+                    <InputText id="jobtype" @bind-Value="estimate.JobType" class="form-control"></InputText>
+                </div>
+                <div class="mb-3">
+                    <label for="firstcontact" class="form-label">Date First Contacted:</label>
+                    <InputDate id="firstcontact" @bind-Value="estimate.DateCreated" class="form-control"></InputDate>
+                </div>
+                <div class="mb-3">
+                    <label for="lastcontact" class="form-label">Date Last Contacted:</label>
+                    <InputDate id="lastcontact" @bind-Value="estimate.DateUpdated" class="form-control"></InputDate>
+                </div>
+                <div class="mb-3">
+                    <label for="isrush" class="form-label">Rush</label>
+                    <InputCheckbox @bind-Value="estimate.IsRush" class="form-checkbox"></InputCheckbox>
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-danger" @onclick="Cancel">Cancel</button>
+            </EditForm>
+        </div>
+    </div>
+}
+
+@code
+{
+    [Parameter]
+    public string? Id { get; set; }
+
+    private string title = string.Empty;
+
+    public Estimate? estimate { get; set; } = new();
+
+    protected override async Task OnParametersSetAsync()
+    {
+        await base.OnParametersSetAsync();
+        if (Id is not null)
+        {
+            title = $"Editing Estimate {Id}";
+            Estimate? foundEstimate = await Http.GetFromJsonAsync<Estimate>($"/api/estimate/{Id}");
+            estimate = new()
+            {
+                Id = foundEstimate!.Id,
+                FirstName = foundEstimate.FirstName,
+                LastName = foundEstimate.LastName,
+                PhoneNumber = foundEstimate.PhoneNumber,
+                JobType = foundEstimate.JobType,
+                IsRush = foundEstimate.IsRush,
+                DateCreated = foundEstimate.DateCreated,
+                DateUpdated = foundEstimate.DateUpdated
+            };
+        }
+        else
+        {
+            title = "New Estimate";
+            estimate = new()
+            {
+                Id = string.Empty,
+                FirstName = string.Empty,
+                LastName = string.Empty,
+                PhoneNumber = string.Empty,
+                JobType = string.Empty,
+                IsRush = false
+            };
+        }
+    }
+
+
+
+    public async Task HandleSubmit()
+    {
+        if (estimate!.Id == "")
+        {
+            await Http.PostAsJsonAsync<Estimate>("/api/estimate", estimate);
+        }
+        else
+        {
+            await Http.PutAsJsonAsync("/api/estimate", estimate);
+        }
+
+        NavigationManager.NavigateTo("/estimates");
+    }
+
+    public void Cancel()
+    {
+        NavigationManager.NavigateTo("/estimates");
+    }
+}

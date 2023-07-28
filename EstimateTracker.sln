@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstimateTracker.Client", "E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstimateTracker.Shared", "EstimateTracker\Shared\EstimateTracker.Shared.csproj", "{2A7832A5-FA10-4392-8E9C-9344460158C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstimateTracker.Data", "EstimateTracker\EstimateTracker.Data\EstimateTracker.Data.csproj", "{4CD18518-2939-419E-8BC7-A8B2AEC14A2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2A7832A5-FA10-4392-8E9C-9344460158C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A7832A5-FA10-4392-8E9C-9344460158C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A7832A5-FA10-4392-8E9C-9344460158C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CD18518-2939-419E-8BC7-A8B2AEC14A2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CD18518-2939-419E-8BC7-A8B2AEC14A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CD18518-2939-419E-8BC7-A8B2AEC14A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CD18518-2939-419E-8BC7-A8B2AEC14A2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

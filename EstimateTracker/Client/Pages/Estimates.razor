@@ -1,0 +1,96 @@
+﻿@page "/estimates"
+@using EstimateTracker.Data.Models;
+@using EstimateTracker.Client.Pages;
+@using EstimateTracker.Client.Shared;
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+
+<PageTitle>EstiTracker</PageTitle>
+
+<h1>Welcome to EstimateTracker</h1>
+
+<div class="row mb-4">
+    <div class="col-sm-6">
+        <button type="button" class="btn btn-primary" @onclick="CreateEstimate">New Estimate</button>
+    </div>
+</div>
+
+@if (estimates is null)
+{
+    <p><em>Loading...</em></p>
+}
+
+else
+{
+
+    <ConfirmDelete Estimate="@currentEstimate" OnClose="@OnDeleteModalClose"/>
+
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="table-dark">
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone Number</th>
+        <th>Job Type</th>
+        <th>Date Created</th>
+        <th>Date Update</th>
+        <th>Rush</th>
+        <th></th>
+        </thead>
+        <tbody>
+            @foreach (var estimate in estimates)
+            {
+                <tr>
+                    <td>@estimate.Id</td>
+                    <td>@estimate.FirstName</td>
+                    <td>@estimate.LastName</td>
+                    <td>@estimate.PhoneNumber</td>
+                    <td>@estimate.JobType</td>
+                    <td>@estimate.DateCreated</td>
+                    <td>@estimate.DateUpdated</td>
+                    <td>@estimate.IsRush</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" @onclick="(() => EditEstimate(estimate.Id))"><i class="oi oi-pencil"></i></button>
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" @onclick="(() => currentEstimate = estimate)"><i class="oi oi-x"></i></button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+}
+
+
+@code {
+
+    public List<Estimate>? estimates { get; set; }
+    public Estimate? currentEstimate;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        estimates = await Http.GetFromJsonAsync<List<Estimate>>("/api/estimate");
+    }
+
+    public void CreateEstimate()
+    {
+        NavigationManager.NavigateTo("/editestimate");
+    }
+
+    public void EditEstimate(string id)
+    {
+        NavigationManager.NavigateTo($"/editestimate/{id}");
+    }
+
+    public async Task OnDeleteModalClose(bool accepted)
+    {
+        if (accepted)
+        {
+           await Http.DeleteAsync($"/api/estimate/{currentEstimate!.Id}");
+           estimates = await Http.GetFromJsonAsync<List<Estimate>>("/api/estimate");
+        }
+    }
+
+}
+
