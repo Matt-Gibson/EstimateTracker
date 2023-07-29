@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shared\EstimateTracker.Shared.csproj" />
     <ProjectReference Include="..\EstimateTracker.Data\EstimateTracker.Data.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>

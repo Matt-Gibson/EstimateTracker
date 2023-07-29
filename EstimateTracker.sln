@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstimateTracker.Server", "E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstimateTracker.Client", "EstimateTracker\Client\EstimateTracker.Client.csproj", "{1D6370F0-B3D2-4558-A2A9-11758AACF6E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstimateTracker.Shared", "EstimateTracker\Shared\EstimateTracker.Shared.csproj", "{2A7832A5-FA10-4392-8E9C-9344460158C4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstimateTracker.Data", "EstimateTracker\EstimateTracker.Data\EstimateTracker.Data.csproj", "{4CD18518-2939-419E-8BC7-A8B2AEC14A2F}"
 EndProject
 Global
@@ -25,10 +23,6 @@ Global
 		{1D6370F0-B3D2-4558-A2A9-11758AACF6E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D6370F0-B3D2-4558-A2A9-11758AACF6E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D6370F0-B3D2-4558-A2A9-11758AACF6E2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2A7832A5-FA10-4392-8E9C-9344460158C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2A7832A5-FA10-4392-8E9C-9344460158C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2A7832A5-FA10-4392-8E9C-9344460158C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A7832A5-FA10-4392-8E9C-9344460158C4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4CD18518-2939-419E-8BC7-A8B2AEC14A2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4CD18518-2939-419E-8BC7-A8B2AEC14A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CD18518-2939-419E-8BC7-A8B2AEC14A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU

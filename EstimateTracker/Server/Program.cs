@@ -1,7 +1,6 @@
 ﻿using EstimateTracker.Data.Interfaces;
 using EstimateTracker.Data.Services;
 using EstimateTracter.Data;
-using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
