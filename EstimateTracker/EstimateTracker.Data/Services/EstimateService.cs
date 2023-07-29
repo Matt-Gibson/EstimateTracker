@@ -1,5 +1,4 @@
-﻿using System;
-using EstimateTracker.Data.Interfaces;
+﻿using EstimateTracker.Data.Interfaces;
 using EstimateTracker.Data.Models;
 using EstimateTracter.Data;
 using Microsoft.EntityFrameworkCore;
@@ -54,4 +53,3 @@ public class EstimateService:IEstimateService
         return estimate;
     }
 }
-

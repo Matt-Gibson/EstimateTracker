@@ -1,6 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using EstimateTracker.Data.Interfaces;
+﻿using System.ComponentModel.DataAnnotations;
 namespace EstimateTracker.Data.Models;
 
 public class Estimate : DataItemBase

@@ -1,5 +1,4 @@
-﻿using System;
-using EstimateTracker.Data.Models;
+﻿using EstimateTracker.Data.Models;
 
 namespace EstimateTracker.Data.Interfaces;
 

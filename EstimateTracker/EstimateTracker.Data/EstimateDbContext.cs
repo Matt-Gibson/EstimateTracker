@@ -1,5 +1,4 @@
-﻿using System;
-using EstimateTracker.Data.Models;
+﻿using EstimateTracker.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
