@@ -1,6 +1,5 @@
 # EstimateTracker
-
-> A Simple Solution for small Service Based business Estimate Tracking - Me
+>A Simple Solution for small Service Based business Estimate Tracking - Me
 
 ## Purpose
 
