@@ -1,5 +1,6 @@
 # EstimateTracker
->A Simple Solution for small Service Based business Estimate Tracking - Me
+
+> A Simple Solution for small Service Based business Estimate Tracking - Me
 
 ## Purpose
 
@@ -23,3 +24,9 @@ after all.
 - CRUD Web Api
 - Asynchronus communication between a Blazor WASM frontend/CRUD Web Api and CRUD Web Api/Sqlite DbRepository Service
 - Use of a 'List<>' to enumerate over and display our data, once free from the ever suspiciously small Sqlite Database
+
+## Instructions
+
+- Ensure that SQLite is installed on your machine.
+- Check that the project builds and runs from the Server project.
+- Testing has thus far been done in Google Chrome.
