@@ -1302,24 +1302,32 @@
     ]
   },
   "packageFolders": {
-    "/Users/matthewgibson/.nuget/packages/": {}
+    "C:\\Users\\IT\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/matthewgibson/Documents/Code/CodeKy/BlazorAppNew/EstimateTracker/EstimateTracker/EstimateTracker.Data/EstimateTracker.Data.csproj",
+      "projectUniqueName": "C:\\Users\\IT\\Desktop\\Matt\\code\\EstimateTracker\\EstimateTracker\\EstimateTracker\\EstimateTracker.Data\\EstimateTracker.Data.csproj",
       "projectName": "EstimateTracker.Data",
-      "projectPath": "/Users/matthewgibson/Documents/Code/CodeKy/BlazorAppNew/EstimateTracker/EstimateTracker/EstimateTracker.Data/EstimateTracker.Data.csproj",
-      "packagesPath": "/Users/matthewgibson/.nuget/packages/",
-      "outputPath": "/Users/matthewgibson/Documents/Code/CodeKy/BlazorAppNew/EstimateTracker/EstimateTracker/EstimateTracker.Data/obj/",
+      "projectPath": "C:\\Users\\IT\\Desktop\\Matt\\code\\EstimateTracker\\EstimateTracker\\EstimateTracker\\EstimateTracker.Data\\EstimateTracker.Data.csproj",
+      "packagesPath": "C:\\Users\\IT\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\IT\\Desktop\\Matt\\code\\EstimateTracker\\EstimateTracker\\EstimateTracker\\EstimateTracker.Data\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/matthewgibson/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\IT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1365,7 +1373,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.306/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

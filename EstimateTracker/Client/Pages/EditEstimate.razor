@@ -15,24 +15,35 @@ else
 {
     <div class="row">
         <div class="col-sm-4">
-            <EditForm Model="@estimate" OnSubmit="HandleSubmit">
+            <EditForm Model="@estimate" OnValidSubmit="HandleValidSubmit">
 
 
                 <div class="mb-3">
                     <label for="firstname" class="form-label">First Name:</label>
                     <InputText id="firstname" @bind-Value="estimate.FirstName" class="form-control"></InputText>
+                    <ValidationMessage For="@(() => estimate.FirstName)" />
                 </div>
                 <div class="mb-3">
                     <label for="lastname" class="form-label">Last Name:</label>
                     <InputText id="lastname" @bind-Value="estimate.LastName" class="form-control"></InputText>
+                    <ValidationMessage For="@(() => estimate.LastName)" />
                 </div>
                 <div class="mb-3">
                     <label for="phone" class="form-label">Phone Number:</label>
                     <InputText id="phone" @bind-Value="estimate.PhoneNumber" class="form-control"></InputText>
+                    <ValidationMessage For="@(() => estimate.PhoneNumber)" />
                 </div>
                 <div class="mb-3">
                     <label for="jobtype" class="form-label">Job Type:</label>
-                    <InputText id="jobtype" @bind-Value="estimate.JobType" class="form-control"></InputText>
+                    <InputSelect id="jobtype" @bind-Value="estimate.JobType">
+                        <option value="">Select Job Type ...</option>
+                        <option value="Roofing">Roofing</option>
+                        <option value="Gutter">Gutter</option>
+                        <option value="Windows">Windows</option>
+                        <option value="Doors">Doors</option>
+                        <option value="Excavation">Excavation</option>
+                    </InputSelect>
+                    <ValidationMessage For="@(() => estimate.JobType)" />
                 </div>
                 <div class="mb-3">
                     <label for="firstcontact" class="form-label">Date First Contacted:</label>
@@ -48,6 +59,9 @@ else
                 </div>
                 <button type="submit" class="btn btn-primary">Save</button>
                 <button type="button" class="btn btn-danger" @onclick="Cancel">Cancel</button>
+                <ValidationSummary/>
+                <DataAnnotationsValidator />
+
             </EditForm>
         </div>
     </div>
@@ -98,7 +112,7 @@ else
 
 
 
-    public async Task HandleSubmit()
+    public async Task HandleValidSubmit()
     {
         if (estimate!.Id == "")
         {

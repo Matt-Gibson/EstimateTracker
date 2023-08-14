@@ -10,20 +10,20 @@ public class Estimate : DataItemBase
     public DateOnly DateUpdated { get; set; }
 
     [Required]
-    [StringLength(50)]
     public String JobType { get; set; } = "";
 
     [Required]
     [StringLength(20)]
-    [MinLength(2)]
+    [MinLength(2, ErrorMessage = "First Name must be at least 2 Characters Long")]
     public string FirstName { get; set; } = string.Empty;
 
     [Required]
     [StringLength(20)]
-    [MinLength(2)]
+    [MinLength(2, ErrorMessage = "Last Name must be at least 2 Characters Long")]
     public string LastName { get; set; } = string.Empty;
 
     [Required]
+    [Phone]
     [StringLength(20)]
     public string PhoneNumber { get; set; } = string.Empty;
 

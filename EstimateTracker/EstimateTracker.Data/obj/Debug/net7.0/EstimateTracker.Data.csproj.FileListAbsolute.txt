@@ -26,3 +26,17 @@
 /Users/matthewgibson/Documents/Code/CodeKy/BlazorAppNew/EstimateTracker/EstimateTracker/EstimateTracker.Data/obj/Debug/net7.0/EstimateTracker.Data.pdb
 /Users/matthewgibson/Documents/Code/CodeKy/BlazorAppNew/EstimateTracker/EstimateTracker/EstimateTracker.Data/obj/Debug/net7.0/EstimateTracker.Data.genruntimeconfig.cache
 /Users/matthewgibson/Documents/Code/CodeKy/BlazorAppNew/EstimateTracker/EstimateTracker/EstimateTracker.Data/obj/Debug/net7.0/ref/EstimateTracker.Data.dll
+C:\Users\IT\Desktop\Matt\code\EstimateTracker\EstimateTracker\EstimateTracker\EstimateTracker.Data\bin\Debug\net7.0\EstimateTracker.Data.deps.json
+C:\Users\IT\Desktop\Matt\code\EstimateTracker\EstimateTracker\EstimateTracker\EstimateTracker.Data\bin\Debug\net7.0\EstimateTracker.Data.runtimeconfig.json
+C:\Users\IT\Desktop\Matt\code\EstimateTracker\EstimateTracker\EstimateTracker\EstimateTracker.Data\bin\Debug\net7.0\EstimateTracker.Data.dll
+C:\Users\IT\Desktop\Matt\code\EstimateTracker\EstimateTracker\EstimateTracker\EstimateTracker.Data\bin\Debug\net7.0\EstimateTracker.Data.pdb
+C:\Users\IT\Desktop\Matt\code\EstimateTracker\EstimateTracker\EstimateTracker\EstimateTracker.Data\obj\Debug\net7.0\EstimateTracker.Data.csproj.AssemblyReference.cache
+C:\Users\IT\Desktop\Matt\code\EstimateTracker\EstimateTracker\EstimateTracker\EstimateTracker.Data\obj\Debug\net7.0\EstimateTracker.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IT\Desktop\Matt\code\EstimateTracker\EstimateTracker\EstimateTracker\EstimateTracker.Data\obj\Debug\net7.0\EstimateTracker.Data.AssemblyInfoInputs.cache
+C:\Users\IT\Desktop\Matt\code\EstimateTracker\EstimateTracker\EstimateTracker\EstimateTracker.Data\obj\Debug\net7.0\EstimateTracker.Data.AssemblyInfo.cs
+C:\Users\IT\Desktop\Matt\code\EstimateTracker\EstimateTracker\EstimateTracker\EstimateTracker.Data\obj\Debug\net7.0\EstimateTracker.Data.csproj.CoreCompileInputs.cache
+C:\Users\IT\Desktop\Matt\code\EstimateTracker\EstimateTracker\EstimateTracker\EstimateTracker.Data\obj\Debug\net7.0\EstimateTracker.Data.dll
+C:\Users\IT\Desktop\Matt\code\EstimateTracker\EstimateTracker\EstimateTracker\EstimateTracker.Data\obj\Debug\net7.0\refint\EstimateTracker.Data.dll
+C:\Users\IT\Desktop\Matt\code\EstimateTracker\EstimateTracker\EstimateTracker\EstimateTracker.Data\obj\Debug\net7.0\EstimateTracker.Data.pdb
+C:\Users\IT\Desktop\Matt\code\EstimateTracker\EstimateTracker\EstimateTracker\EstimateTracker.Data\obj\Debug\net7.0\EstimateTracker.Data.genruntimeconfig.cache
+C:\Users\IT\Desktop\Matt\code\EstimateTracker\EstimateTracker\EstimateTracker\EstimateTracker.Data\obj\Debug\net7.0\ref\EstimateTracker.Data.dll
