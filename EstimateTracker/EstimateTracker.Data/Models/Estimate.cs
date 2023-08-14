@@ -4,10 +4,10 @@ namespace EstimateTracker.Data.Models;
 public class Estimate : DataItemBase
 {
     [Required]
-    public DateOnly DateCreated { get; set; }
+    public DateOnly DateCreated { get; set; } = DateOnly.FromDateTime(DateTime.Now);
 
     [Required]
-    public DateOnly DateUpdated { get; set; }
+    public DateOnly DateUpdated { get; set; } = DateOnly.FromDateTime(DateTime.Now);   
 
     [Required]
     public String JobType { get; set; } = "";
