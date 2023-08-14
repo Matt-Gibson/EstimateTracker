@@ -11,14 +11,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EstimateTracker.Data.Migrations
 {
     [DbContext(typeof(EstimateDbContext))]
-    [Migration("20230727073450_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20230814192235_Resetting DB after DEscription added to Estimate.cs")]
+    partial class ResettingDBafterDEscriptionaddedtoEstimatecs
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "7.0.9");
+            modelBuilder.HasAnnotation("ProductVersion", "7.0.10");
 
             modelBuilder.Entity("EstimateTracker.Data.Models.Estimate", b =>
                 {
@@ -31,6 +31,10 @@ namespace EstimateTracker.Data.Migrations
                     b.Property<DateOnly>("DateUpdated")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasMaxLength(20)
@@ -41,7 +45,6 @@ namespace EstimateTracker.Data.Migrations
 
                     b.Property<string>("JobType")
                         .IsRequired()
-                        .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("LastName")

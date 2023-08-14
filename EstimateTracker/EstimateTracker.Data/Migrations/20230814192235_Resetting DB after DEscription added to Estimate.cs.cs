@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace EstimateTracker.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class ResettingDBafterDEscriptionaddedtoEstimatecs : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,7 +18,8 @@ namespace EstimateTracker.Data.Migrations
                     Id = table.Column<string>(type: "TEXT", nullable: false),
                     DateCreated = table.Column<DateOnly>(type: "TEXT", nullable: false),
                     DateUpdated = table.Column<DateOnly>(type: "TEXT", nullable: false),
-                    JobType = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
+                    JobType = table.Column<string>(type: "TEXT", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: false),
                     FirstName = table.Column<string>(type: "TEXT", maxLength: 20, nullable: false),
                     LastName = table.Column<string>(type: "TEXT", maxLength: 20, nullable: false),
                     PhoneNumber = table.Column<string>(type: "TEXT", maxLength: 20, nullable: false),

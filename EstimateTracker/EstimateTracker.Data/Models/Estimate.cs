@@ -10,7 +10,10 @@ public class Estimate : DataItemBase
     public DateOnly DateUpdated { get; set; } = DateOnly.FromDateTime(DateTime.Now);   
 
     [Required]
-    public String JobType { get; set; } = "";
+    public string JobType { get; set; } = string.Empty;
+
+    [Required] 
+    public string Description { get; set; } = string.Empty;
 
     [Required]
     [StringLength(20)]
