@@ -42,8 +42,15 @@ else
                         <option value="Windows">Windows</option>
                         <option value="Doors">Doors</option>
                         <option value="Excavation">Excavation</option>
+                        <option value="Carpentry">Carpentry</option>
+                        <option value="Siding">Siding</option>
                     </InputSelect>
                     <ValidationMessage For="@(() => estimate.JobType)" />
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description:</label>
+                    <InputTextArea id="description" @bind-Value="estimate.Description" class="form-control"></InputTextArea>
+                    <ValidationMessage For="@(() => estimate.Description)" />
                 </div>
                 <div class="mb-3">
                     <label for="firstcontact" class="form-label">Date First Contacted:</label>
