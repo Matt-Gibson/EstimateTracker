@@ -30,6 +30,22 @@ public class Estimate : DataItemBase
     [StringLength(20)]
     public string PhoneNumber { get; set; } = string.Empty;
 
+    [Phone]
+    [StringLength(20)]
+    public string SecondaryPhoneNumnber { get; set; } = string.Empty;
+
+    [EmailAddress]
+    public string EmailAddress { get; set; } = string.Empty;
+
+    [Required]
+    public string JobStatus = string.Empty;
+
+    [StringLength(50)]
+    public string Comments { get; set; } = string.Empty;
+
+    [Required]
+    public string EnteringEmployee { get; set; } = string.Empty;
+
     public bool IsRush { get; set; } = false;
 }
 

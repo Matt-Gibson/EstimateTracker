@@ -30,11 +30,16 @@ else
           <th>First Name</th>
           <th>Last Name</th>
           <th>Phone Number</th>
+          <th>Secondary Phone Number</th>
           <th>Job Type</th>
           <th>Description</th>
           <th>Date Created</th>
           <th>Date Update</th>
           <th>Rush</th>
+          <th>Status</th>
+          <th>Email Address</th>
+          <th>Comments</th>
+          <th>Taker</th>
           <th></th>
          </tr>
         </thead>
@@ -46,11 +51,16 @@ else
                     <td>@estimate.FirstName</td>
                     <td>@estimate.LastName</td>
                     <td>@estimate.PhoneNumber</td>
+                    <td>@estimate.SecondaryPhoneNumnber</td>
                     <td>@estimate.JobType</td>
                     <td>@estimate.Description</td>
                     <td>@estimate.DateCreated</td>
                     <td>@estimate.DateUpdated</td>
                     <td>@estimate.IsRush</td>
+                    <td>@estimate.JobStatus</td>
+                    <td>@estimate.EmailAddress</td>
+                    <td>@estimate.Comments</td>
+                    <td>@estimate.EnteringEmployee</td>
                     <td>
                         <button type="button" class="btn btn-primary" @onclick="(() => EditEstimate(estimate.Id))"><i class="oi oi-pencil"></i></button>
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" @onclick="(() => currentEstimate = estimate)"><i class="oi oi-x"></i></button>
