@@ -16,8 +16,30 @@ else
     <div class="row">
         <div class="col-sm-4">
             <EditForm Model="@estimate" OnValidSubmit="HandleValidSubmit">
-
-
+                <div class="mb-3">
+                    <label for="employee" class="form-label">Entered By:</label>
+                    <InputSelect id="employee" @bind-Value="estimate.EnteringEmployee">
+                        <option value="">Select Your Name</option>
+                        <option value="Jamey">Jamey</option>
+                        <option value="Johnny">Johnny</option>
+                        <option value="Mike">Mike</option>
+                        <option value="Dustin">Dustin</option>
+                        <option value="Go">Go</option>
+                    </InputSelect>
+                    <ValidationMessage For="@(() => estimate.EnteringEmployee)" />
+                </div>
+                <div class="mb-3">
+                    <label for="jobstatus" class="form-label">Status:</label>
+                    <InputSelect id="jobstatus" @bind-Value="estimate.JobStatus">
+                        <option value="">Select Status ...</option>
+                        <option value="Needs Measured">Needs Measured</option>
+                        <option value="Submitted to Customer">Submitted to Customer</option>
+                        <option value="Go">Go</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Paid">Paid</option>
+                    </InputSelect>
+                    <ValidationMessage For="@(() => estimate.JobStatus)" />
+                </div>
                 <div class="mb-3">
                     <label for="firstname" class="form-label">First Name:</label>
                     <InputText id="firstname" @bind-Value="estimate.FirstName" class="form-control"></InputText>
@@ -32,6 +54,16 @@ else
                     <label for="phone" class="form-label">Phone Number:</label>
                     <InputText id="phone" @bind-Value="estimate.PhoneNumber" class="form-control"></InputText>
                     <ValidationMessage For="@(() => estimate.PhoneNumber)" />
+                </div>
+                <div class="mb-3">
+                    <label for="secondaryphone" class="form-label">Secondary Phone Number:</label>
+                    <InputText id="secondaryphone" @bind-Value="estimate.SecondaryPhoneNumnber" class="form-control"></InputText>
+                    <ValidationMessage For="@(() => estimate.SecondaryPhoneNumnber)" />
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <InputText id="email" @bind-Value="estimate.EmailAddress" class="form-control"></InputText>
+                    <ValidationMessage For="@(() => estimate.EmailAddress)" />
                 </div>
                 <div class="mb-3">
                     <label for="jobtype" class="form-label">Job Type:</label>
@@ -63,6 +95,11 @@ else
                 <div class="mb-3">
                     <label for="isrush" class="form-label">Rush</label>
                     <InputCheckbox @bind-Value="estimate.IsRush" class="form-checkbox"></InputCheckbox>
+                </div>
+                <div class="mb-3">
+                    <label for="comments" class="form-label">Comments:</label>
+                    <InputTextArea id="comments" @bind-Value="estimate.Comments" class="form-control"></InputTextArea>
+                    <ValidationMessage For="@(() => estimate.Comments)" />
                 </div>
                 <button type="submit" class="btn btn-primary">Save</button>
                 <button type="button" class="btn btn-danger" @onclick="Cancel">Cancel</button>
