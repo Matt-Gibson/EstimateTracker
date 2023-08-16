@@ -32,13 +32,13 @@ public class Estimate : DataItemBase
 
     [Phone]
     [StringLength(20)]
-    public string SecondaryPhoneNumnber { get; set; } = string.Empty;
+    public string SecondaryPhoneNumber { get; set; } = string.Empty;
 
     [EmailAddress]
     public string EmailAddress { get; set; } = string.Empty;
 
     [Required]
-    public string JobStatus = string.Empty;
+    public string JobStatus { get; set; } = string.Empty;
 
     [StringLength(50)]
     public string Comments { get; set; } = string.Empty;

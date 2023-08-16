@@ -22,6 +22,11 @@ namespace EstimateTracker.Data.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Comments")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("TEXT");
+
                     b.Property<DateOnly>("DateCreated")
                         .HasColumnType("TEXT");
 
@@ -29,6 +34,14 @@ namespace EstimateTracker.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("EmailAddress")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("EnteringEmployee")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -40,6 +53,10 @@ namespace EstimateTracker.Data.Migrations
                     b.Property<bool>("IsRush")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("JobStatus")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("JobType")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -50,6 +67,11 @@ namespace EstimateTracker.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SecondaryPhoneNumber")
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("TEXT");
